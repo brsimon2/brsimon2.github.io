@@ -74,7 +74,7 @@ disqusShortname = "yourdiscussshortname"
     url = "https://www.linkedin.com/in/bradley-simon-36a0b9157/"
 [[params.social]]
     name = "Resume"
-    icon = "file-alt"
+    icon = "fas fa-file-alt"
     weight = 6
     url = "images/Website_Resume.pdf"
 
