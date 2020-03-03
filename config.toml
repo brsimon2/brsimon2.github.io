@@ -1,5 +1,5 @@
 baseurl = "/"
-title = "johndoe"
+title = "Bradley Simon"
 
 theme = "hugo-coder"
 
@@ -20,7 +20,7 @@ disqusShortname = "yourdiscussshortname"
     description = "John Doe's personal website"
     keywords = "blog,developer,personal"
     info = "Full Stack DevOps and Magician"
-    avatarurl = "images/avatar.jpg"
+    avatarurl = "images/Website_Headshot.jpg"
     #gravatar = "john.doe@example.com"
     footercontent = "Enter a text here."
 
