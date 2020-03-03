@@ -1,6 +1,5 @@
 ---
 slug: projects
-title: Projetos
+title: Projects
 ---
 
-Em construção... Aguarde!

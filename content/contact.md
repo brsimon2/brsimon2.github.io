@@ -3,4 +3,5 @@ slug: contact
 title: Contact
 ---
 
-Follow me, @johndoe.
+Email: brsimon2@illinois.edu
+Phone: 847-436-9015
