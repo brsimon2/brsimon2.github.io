@@ -71,14 +71,12 @@ disqusShortname = "yourdiscussshortname"
     name = "LinkedIn"
     icon = "fab fa-linkedin"
     weight = 4
-    url = "https://www.linkedin.com/in/bradley-simon/"
+    url = "https://www.linkedin.com/in/bradley-simon-36a0b9157/"
 [[params.social]]
-    name = "RSS"
-    icon = "fas fa-rss"
+    name = "Resume"
+    icon = "file-alt"
     weight = 6
-    url = "https://myhugosite.com/index.xml"
-    rel = "alternate"
-    type = "application/rss+xml"
+    url = "images/Website_Resume.pdf"
 
 
 [languages]
