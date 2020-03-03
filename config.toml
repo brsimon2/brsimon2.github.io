@@ -22,7 +22,7 @@ disqusShortname = "yourdiscussshortname"
     info = "Business Systems Analyst and Data Scientist"
     avatarurl = "images/Website_Portrait.jpg"
     #gravatar = "john.doe@example.com"
-    footercontent = "Enter a text here."
+    #footercontent = "Enter a text here."
 
     dateformat = "January 2, 2006"
 
@@ -46,10 +46,10 @@ disqusShortname = "yourdiscussshortname"
     maxSeeAlsoItems = 5
 
     # Custom CSS
-    custom_css = []
+    #custom_css = []
 
     # Custom JS
-    custom_js = []
+    #custom_js = []
 
 # If you want to use fathom(https://usefathom.com) for analytics, add this section
 [params.fathomAnalytics]
