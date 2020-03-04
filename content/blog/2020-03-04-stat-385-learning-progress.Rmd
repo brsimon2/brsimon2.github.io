@@ -1,12 +1,11 @@
 ---
-title: STAT 385 Learning Progress
-author: Bradley Simon
+title: "STAT 385 Learning Progress"
+author: "Bradley Simon"
 date: '2020-03-04'
+output: pdf_document
 slug: stat-385-learning-progress
-categories:
-  - blog
-tags:
-  - r
+tags: r
+categories: blog
 ---
 The first topics I learned in R were basic mathematical operations, creating functions, data types, data structures, and data frames. One of the first functions I created was a French Roulette wheel that returns whether the user's input bet wins or not. The code for this function is shown below.
 
