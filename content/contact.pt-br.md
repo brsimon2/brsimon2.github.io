@@ -1,6 +1,8 @@
 ---
 slug: contact
-title: Contato
+title: Contact
 ---
 
-Me siga em @joaoninguem.
+Email: brsimon2@illinois.edu
+
+Phone: 847-436-9015
