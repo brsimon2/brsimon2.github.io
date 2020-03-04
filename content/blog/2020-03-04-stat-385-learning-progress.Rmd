@@ -1,0 +1,91 @@
+---
+title: STAT 385 Learning Progress
+author: Bradley Simon
+date: '2020-03-04'
+slug: stat-385-learning-progress
+categories:
+  - blog
+tags:
+  - r
+---
+The first topics I learned in R were basic mathematical operations, creating functions, data types, data structures, and data frames. One of the first functions I created was a French Roulette wheel that returns whether the user's input bet wins or not. The code for this function is shown below.
+
+```{r}
+wheel <- read.csv("https://nkha149.github.io/stat385-sp2020/files/data/roulette.csv")
+roulette <- function(bet = 14) {
+  win_num <- sample(x = 1:37, size = 1)
+  wheel[win_num, 1] == bet
+}
+set.seed(385)
+roulette(bet = 10)
+```
+
+I have also learned how to modify vlaues in lists, vectors, matrices, and data frames, as well as how to graph data sets. The code for a scatterplot that is categroized by color is shown below.
+
+```{r}
+plot(formula = Sepal.Width ~ Sepal.Length, data = iris,
+     col = c("green", "red", "blue")[iris$Species],
+     main = "Iris Sepal Length vs. Sepal Width by Species",
+     xlab = "Sepal Length", ylab = "Sepal Width", pch = 16)
+grid()
+```
+
+Lastly, I have learned how to utilize parellel computing by vectorizing functions. I took the loop function shown below and vectorized it so that the speed was increased significantly.
+
+```{r}
+roulette_loop <- function(many_bets) {
+  win_lose_random <- sample(x = c(TRUE, FALSE), size = length(many_bets),
+                            replace = TRUE)
+  total_prize <- c()
+  for (i in 1:length(many_bets)) {
+    bet <- many_bets[i]
+    prize <- 0
+    if (win_lose_random[i]) {
+      if (bet == 'low') {
+        prize <- 10
+      } else if (bet == 'high'){
+        prize <- 10
+      } else if (bet == 'red') {
+        prize <- 20
+      } else if (bet == "black") {
+        prize <- 20
+      } else if (bet == "odd") {
+        prize <- 15
+      } else if (bet == "even") {
+        prize <- 15
+      } else if (bet == "first") {
+        prize <- 50
+      } else if (bet == "second") {
+        prize <- 50
+      } else if (bet == "third") {
+        prize <- 50
+      }
+    }
+  total_prize <- c(total_prize, prize)
+  }
+  
+  total_prize
+}
+set.seed(385)
+long_vec <- rep(c("red", "black", "low", "high", "second", "first", "third",
+                  "odd", "even"), 10000)
+system.time(roulette_loop(many_bets = long_vec))
+```
+
+```{r}
+roulette_vec <- function(many_bets){
+  win_lose_random <- sample(x = c(TRUE, FALSE), size = length(many_bets),
+                            replace = TRUE)
+  look_up_table <- c("low" = 10,"high" = 10, "red" = 20, "black" = 20, "odd" =   15,"even" = 15,
+                     "first" = 50, "second" = 50, "third" = 50)
+  prize <- look_up_table[many_bets]
+  unname(win_lose_random * prize)
+}
+
+
+set.seed(385)
+long_vec <- rep(c("red", "black", "low", "high", "second", "first", "third",
+                  "odd", "even"), 10000)
+system.time(roulette_vec(many_bets = long_vec))
+```
+
