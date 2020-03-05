@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>r on Bradley Simon</title>
+    <link>/tags/r/</link>
+    <description>Recent content in r on Bradley Simon</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 04 Mar 2020 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/r/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>STAT 385 Learning Progress</title>
+      <link>/blog/stat-385-learning-progress/</link>
+      <pubDate>Wed, 04 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/blog/stat-385-learning-progress/</guid>
+      <description>The first topics I learned in R were basic mathematical operations, creating functions, data types, data structures, and data frames. One of the first functions I created was a French Roulette wheel that returns whether the user’s input bet wins or not. The code for this function is shown below.
+wheel &amp;lt;- read.csv(&amp;quot;https://nkha149.github.io/stat385-sp2020/files/data/roulette.csv&amp;quot;) roulette &amp;lt;- function(bet = 14) { win_num &amp;lt;- sample(x = 1:37, size = 1) wheel[win_num, 1] == bet } set.</description>
+    </item>
+    
+  </channel>
+</rss>

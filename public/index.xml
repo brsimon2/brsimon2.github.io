@@ -1,15 +1,25 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>johndoe</title>
+    <title>Bradley Simon</title>
     <link>/</link>
-    <description>Recent content on johndoe</description>
+    <description>Recent content on Bradley Simon</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 20 Mar 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 04 Mar 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>STAT 385 Learning Progress</title>
+      <link>/blog/stat-385-learning-progress/</link>
+      <pubDate>Wed, 04 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/blog/stat-385-learning-progress/</guid>
+      <description>The first topics I learned in R were basic mathematical operations, creating functions, data types, data structures, and data frames. One of the first functions I created was a French Roulette wheel that returns whether the user’s input bet wins or not. The code for this function is shown below.
+wheel &amp;lt;- read.csv(&amp;quot;https://nkha149.github.io/stat385-sp2020/files/data/roulette.csv&amp;quot;) roulette &amp;lt;- function(bet = 14) { win_num &amp;lt;- sample(x = 1:37, size = 1) wheel[win_num, 1] == bet } set.</description>
+    </item>
     
     <item>
       <title>Render LaTeX using KaTeX</title>
@@ -31,6 +41,15 @@ This is text with inline math $\sum_{n=1}^{\infty} 2^{-n} =1$ This is text with 
       
       <guid>/posts/hugo-coder-wiki/</guid>
       <description></description>
+    </item>
+    
+    <item>
+      <title>Dummy</title>
+      <link>/posts/dummy/</link>
+      <pubDate>Mon, 31 Dec 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/dummy/</guid>
+      <description>Nada para ver aqui!</description>
     </item>
     
     <item>
@@ -104,16 +123,23 @@ Follow the following steps:
     </item>
     
     <item>
-      <title>About Hugo</title>
+      <title>About Me</title>
       <link>/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/about/</guid>
-      <description>Hugo is a static site engine written in Go.
-It makes use of a variety of open source projects including:
- Cobra Viper J Walter Weatherman Cast  Learn more and contribute on GitHub.
-Setup Some fun facts about Hugo:
- Built in Go Loosely inspired by Jekyll Primarily developed by spf13 on the train while commuting to and from Manhattan. Coded in Vim using spf13-vim  Have questions or suggestions?</description>
+      <description>I am currently a University of Illinois undergraduate pursuing a dual degree in Information Systems and Statistics from the Gies College of Business and the College of LAS. These degrees drive me toward a career where I will apply technology to problem-solving, lead and collaborate on interdisciplinary teams, and drive innovation.
+On campus, I am a member of Illinois Business Council. I have gained leadership experience as a member of both the Charity Fundraising committee and the Technology committee.</description>
+    </item>
+    
+    <item>
+      <title>About Me</title>
+      <link>/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/about/</guid>
+      <description>I am currently a University of Illinois undergraduate pursuing a dual degree in Information Systems and Statistics from the Gies College of Business and the College of LAS. These degrees drive me toward a career where I will apply technology to problem-solving, lead and collaborate on interdisciplinary teams, and drive innovation.
+On campus, I am a member of Illinois Business Council. I have gained leadership experience as a member of both the Charity Fundraising committee and the Technology committee.</description>
     </item>
     
     <item>
@@ -122,7 +148,18 @@ Setup Some fun facts about Hugo:
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/contact/</guid>
-      <description>Follow me, @johndoe.</description>
+      <description>Email: brsimon2@illinois.edu
+Phone: 847-436-9015</description>
+    </item>
+    
+    <item>
+      <title>Contact</title>
+      <link>/contact/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contact/</guid>
+      <description>Email: brsimon2@illinois.edu
+Phone: 847-436-9015</description>
     </item>
     
     <item>
@@ -132,6 +169,15 @@ Setup Some fun facts about Hugo:
       
       <guid>/projects/</guid>
       <description>Nothing to see here&amp;hellip; Move along!</description>
+    </item>
+    
+    <item>
+      <title>Projects</title>
+      <link>/projects/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/projects/</guid>
+      <description></description>
     </item>
     
   </channel>
