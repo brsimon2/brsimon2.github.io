@@ -93,7 +93,7 @@ disqusShortname = "yourdiscussshortname"
             [[languages.en.menu.main]]
             name = "Blog"
             weight = 2
-            url = "blog/"
+            url = "blog/2020-03-04-stat-385-learning-progress.Rmd"
 
             [[languages.en.menu.main]]
             name = "Projects"

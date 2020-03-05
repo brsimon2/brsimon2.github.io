@@ -1,6 +1,6 @@
 ---
 slug: about
-title: About Hugo
+title: About Me
 ---
 
 I am currently a University of Illinois undergraduate pursuing a dual degree in Information Systems and Statistics from the Gies College of Business and the College of LAS. These degrees drive me toward a career where I will apply technology to problem-solving, lead and collaborate on interdisciplinary teams, and drive innovation.
