@@ -17,7 +17,7 @@
       <pubDate>Sat, 07 Mar 2020 00:00:00 +0000</pubDate>
       
       <guid>/post/the-future-of-apache-spark/</guid>
-      <description>Apache Spark is an open-source, distributed, large-scale data processing engine. It is an improvement to the MapReduce framework in that it uses in-memory processing to increase speeds by around 100 times. It can also stream data real-time and it supports many programming languages such as Scala, Java, Python, SQL, and R. All of these features make Apache Spark, complemented with the Spark MLlib (machine learning library) package, very useful in deep learning.</description>
+      <description>Apache Spark is an open-source, distributed, large-scale data processing engine. It is an improvement to the MapReduce framework in that it uses in-memory processing to increase speeds by around 100 times. It can also stream data real-time, and it supports many programming languages such as Scala, Java, Python, SQL, and R. All of these features make Apache Spark, complemented with the Spark MLlib (machine learning library) package, very useful in deep learning.</description>
     </item>
     
     <item>
