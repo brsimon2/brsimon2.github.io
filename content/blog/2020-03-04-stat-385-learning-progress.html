@@ -65,7 +65,7 @@ long_vec &lt;- rep(c(&quot;red&quot;, &quot;black&quot;, &quot;low&quot;, &quot;
                   &quot;odd&quot;, &quot;even&quot;), 10000)
 system.time(roulette_loop(many_bets = long_vec))</code></pre>
 <pre><code>##    user  system elapsed 
-##  17.592   8.665  26.313</code></pre>
+##  17.992   9.634  27.702</code></pre>
 <pre class="r"><code>roulette_vec &lt;- function(many_bets){
   win_lose_random &lt;- sample(x = c(TRUE, FALSE), size = length(many_bets),
                             replace = TRUE)
@@ -81,4 +81,4 @@ long_vec &lt;- rep(c(&quot;red&quot;, &quot;black&quot;, &quot;low&quot;, &quot;
                   &quot;odd&quot;, &quot;even&quot;), 10000)
 system.time(roulette_vec(many_bets = long_vec))</code></pre>
 <pre><code>##    user  system elapsed 
-##   0.006   0.000   0.006</code></pre>
+##   0.006   0.001   0.006</code></pre>

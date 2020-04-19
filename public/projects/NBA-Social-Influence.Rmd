@@ -1,0 +1,81 @@
+---
+title: "hw07.Rmd"
+author: "Bradley Simon"
+date: "4/18/2020"
+output: html_document
+---
+
+# **Dataset**
+
+This dataset includes the on-court performance of 100 NBA players alongside their social influence and salary for the 2016-2017 season. The main measurement of social influence for this study is the number of twitter followers that a player has. 
+
+# **Questions and Visualizations**
+
+1. What is the relationship between a player's salary and number of twitter followers?
+2. Do players that score more points also have more twitter followers?
+3. Does the team that a player is on affect their social influence?
+4. Is there a correlation between age and twitter followers?
+5. Do players that win more games have more twitter followers?
+
+
+```{r}
+NBAData <- read.csv("https://raw.githubusercontent.com/brsimon2/NBA-Social-Influence/master/nba_2016_2017_100.csv")
+library(ggplot2)
+```
+
+## **Question 1**
+
+```{r message=FALSE}
+ggplot(data = NBAData, mapping = aes(x = SALARY_MILLIONS,y = TWITTER_FOLLOWER_COUNT_MILLIONS)) +
+  geom_smooth()+
+  labs(x = "Salary (millions)", y = "Twitter Followers (millions)")
+```
+
+*There appears to be a strong correlation between a player's salary and number of twitter followers with an exponential growth rate.*
+
+## **Question 2**
+
+```{r}
+ggplot(data = NBAData, mapping = aes(x = PTS,y = TWITTER_FOLLOWER_COUNT_MILLIONS)) +
+  geom_jitter(color = "red")+
+  labs(x = "Points per game", y = "Twitter Followers (millions)")
+```
+
+*There appears to be a slight correlation between the number of points that a player scores and number of twitter followers they have, but not nearly as strong as the correlation between salary and twitter followers.*
+
+## **Question 3**
+
+```{r message=FALSE}
+library(tidyverse)
+Team_Twitter <- NBAData %>% 
+  group_by(TEAM_ABBREVIATION) %>% 
+  summarise(avg_followers = mean(TWITTER_FOLLOWER_COUNT_MILLIONS)) %>% 
+  arrange(desc(avg_followers)) %>% 
+  head(n=10)
+
+ggplot(data = Team_Twitter, mapping = aes(x= TEAM_ABBREVIATION,y = avg_followers)) +
+  geom_bar(stat = "identity", fill = "dodgerblue")+
+  labs(x = "Team", y = "Average Followers (millions)")
+```
+
+*Based on the sample, some teams have significantly more twitter followers than other teams, so it seems that the team a player is on affects the number of twitter followers they have. The Cleveland Cavaliers and the Golden State Warriors were both in the championship in 2016-2017, so it makes sense that they would have more social influence .*
+
+## **Question 4**
+
+```{r}
+ggplot(data = NBAData, mapping = aes(x= AGE, y = TWITTER_FOLLOWER_COUNT_MILLIONS)) +
+  geom_line(color = "navy")+
+  labs(x = "Age", y = "Twitter Followers (millions)")
+```
+
+*There doesn't seem to be a direct correlation between age and twitter folowwers, but it appears that the players with the most followers are in their late twenties and early thirties.*
+
+## **Question 5**
+
+```{r}
+ggplot(data = NBAData, mapping = aes(x= W_PCT, y = TWITTER_FOLLOWER_COUNT_MILLIONS)) +
+  geom_step()+
+  labs(x = "Win Percentage", y = "Twitter Followers (millions)")
+```
+
+*It looks like a player's win percentage is not strogly correlated to the number of twitter followers they have, but the players with the most twitter followers also have a high win percentage (betweeen 0.6 and 0.8)*
