@@ -16,7 +16,7 @@ output: html_document
 <ol style="list-style-type: decimal">
 <li>What is the relationship between a player’s salary and number of twitter followers?</li>
 <li>Do players that score more points also have more twitter followers?</li>
-<li>Does the team that a player is on affect their social influence?</li>
+<li>Is a player’s team related to the amount of social influence that they have?</li>
 <li>Is there a correlation between age and twitter followers?</li>
 <li>Do players that win more games have more twitter followers?</li>
 </ol>
@@ -51,7 +51,7 @@ ggplot(data = Team_Twitter, mapping = aes(x= TEAM_ABBREVIATION,y = avg_followers
   geom_bar(stat = &quot;identity&quot;, fill = &quot;dodgerblue&quot;)+
   labs(x = &quot;Team&quot;, y = &quot;Average Followers (millions)&quot;)</code></pre>
 <p><img src="/projects/NBA-Social-Influence_files/figure-html/unnamed-chunk-4-1.png" width="672" /></p>
-<p><em>Based on the sample, some teams have significantly more twitter followers than other teams, so it seems that the team a player is on affects the number of twitter followers they have. The Cleveland Cavaliers and the Golden State Warriors were both in the championship in 2016-2017, so it makes sense that they would have more social influence .</em></p>
+<p><em>Based on the sample, some teams have significantly more twitter followers than other teams, so it seems that the team a player is on is related to the number of twitter followers they have. The Cleveland Cavaliers and the Golden State Warriors were both in the championship in 2016-2017, so it makes sense that they would have more social influence.</em></p>
 </div>
 <div id="question-4" class="section level2">
 <h2><strong>Question 4</strong></h2>
@@ -67,6 +67,6 @@ ggplot(data = Team_Twitter, mapping = aes(x= TEAM_ABBREVIATION,y = avg_followers
   geom_step()+
   labs(x = &quot;Win Percentage&quot;, y = &quot;Twitter Followers (millions)&quot;)</code></pre>
 <p><img src="/projects/NBA-Social-Influence_files/figure-html/unnamed-chunk-6-1.png" width="672" /></p>
-<p><em>It looks like a player’s win percentage is not strogly correlated to the number of twitter followers they have, but the players with the most twitter followers also have a high win percentage (betweeen 0.6 and 0.8).</em></p>
+<p><em>It looks like a player’s win percentage is not strongly correlated to the number of twitter followers they have, but the players with the most twitter followers also have a high win percentage (betweeen 0.6 and 0.8).</em></p>
 </div>
 </div>
