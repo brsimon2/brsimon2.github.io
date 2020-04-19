@@ -78,4 +78,4 @@ ggplot(data = NBAData, mapping = aes(x= W_PCT, y = TWITTER_FOLLOWER_COUNT_MILLIO
   labs(x = "Win Percentage", y = "Twitter Followers (millions)")
 ```
 
-*It looks like a player's win percentage is not strogly correlated to the number of twitter followers they have, but the players with the most twitter followers also have a high win percentage (betweeen 0.6 and 0.8)*
+*It looks like a player's win percentage is not strogly correlated to the number of twitter followers they have, but the players with the most twitter followers also have a high win percentage (betweeen 0.6 and 0.8).*
