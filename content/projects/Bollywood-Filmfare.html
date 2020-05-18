@@ -1,0 +1,82 @@
+---
+title: "Bollywood Filmfare Awards"
+author: "Bradley Simon"
+date: "2020-04-27"
+output: html_document
+---
+
+
+
+<pre class="r"><code>CWLData &lt;- read.csv(&quot;https://raw.githubusercontent.com/brsimon2/Bollywood_Filmfare/master/Filmfare-Awards.csv&quot;)</code></pre>
+<div id="graph-1" class="section level1">
+<h1>Graph 1</h1>
+<pre class="r"><code>library(tidyverse)
+library(scales)
+Box_Office_IMDBRating &lt;- CWLData %&gt;% 
+  group_by(IMDB.rating) %&gt;% 
+  summarise(Total_Box_Office = sum(as.numeric(Box.Office.Earnings.in.Rupees), na.rm = TRUE))
+
+ggplot(data = Box_Office_IMDBRating, mapping = aes(x = IMDB.rating, y = Total_Box_Office)) +
+  geom_smooth(color = &quot;dodgerblue&quot;) +
+  labs(x = &quot;IMDB Rating&quot;, y = &quot;Box Office Earnings in Rupees&quot;)+
+  scale_y_continuous(labels = comma)</code></pre>
+<p><img src="/projects/Bollywood-Filmfare_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
+<p><strong>This graph shows that a higher IMDB rating does not necesssarily relate to more box office earnings.</strong></p>
+</div>
+<div id="graph-2" class="section level1">
+<h1>Graph 2</h1>
+<pre class="r"><code>Box_Office_Month &lt;- CWLData %&gt;% 
+  select(Release.month,Box.Office.Earnings.in.Rupees) %&gt;% 
+  filter(!is.na(Box.Office.Earnings.in.Rupees)) %&gt;% 
+  group_by(Release.month) %&gt;% 
+  summarise(Total_Box_Office = mean(as.numeric(Box.Office.Earnings.in.Rupees), na.rm = TRUE))
+
+ggplot(data = Box_Office_Month, mapping = aes(x = Release.month, y = Total_Box_Office)) +
+  geom_bar(fill = &quot;darkgreen&quot;, stat = &quot;identity&quot;) +
+  labs(x = &quot;Release Month&quot;, y = &quot;Average Box Office Earnings in Rupees&quot;)+
+  coord_flip()+
+  scale_y_continuous(labels = comma)</code></pre>
+<p><img src="/projects/Bollywood-Filmfare_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
+<p><strong>From the graph, it is clear that movies released in May have a higher likelihood of receive higher box office earnings.</strong></p>
+</div>
+<div id="graph-3" class="section level1">
+<h1>Graph 3</h1>
+<pre class="r"><code>Filtered_CWLData &lt;- CWLData %&gt;% 
+  filter(!is.na(Box.Office.Earnings.in.Rupees))
+
+ggplot(data = Filtered_CWLData, mapping = aes(x = Release.month)) +
+  geom_bar(fill = &quot;darkorange&quot;) +
+  labs(x = &quot;Release Month&quot;)+
+  coord_flip()+
+  labs(y = &quot;Total Movies Released&quot;, x = &quot;Month&quot;)+
+  scale_y_continuous(breaks = scales::pretty_breaks(n = 10))</code></pre>
+<p><img src="/projects/Bollywood-Filmfare_files/figure-html/unnamed-chunk-4-1.png" width="672" /></p>
+<p><strong>Most award winning movies are released in January and December.</strong></p>
+</div>
+<div id="graph-4" class="section level1">
+<h1>Graph 4</h1>
+<pre class="r"><code>Director_Earnings &lt;- Filtered_CWLData %&gt;% 
+  group_by(Directors) %&gt;% 
+  summarise(Total_Box_Office = sum(as.numeric(Box.Office.Earnings.in.Rupees), na.rm = TRUE)) %&gt;% 
+  arrange(desc(Total_Box_Office)) %&gt;% 
+  head(n=8)
+
+
+ggplot(data = Director_Earnings, mapping = aes(x = Directors, y = Total_Box_Office)) +
+  geom_bar(fill = &quot;red&quot;, stat = &quot;identity&quot;) +
+  labs(x = &quot;Producer&quot;, y = &quot;Box Office Earnings in Rupees&quot;)+
+  coord_flip()+
+  scale_y_continuous(labels = comma)</code></pre>
+<p><img src="/projects/Bollywood-Filmfare_files/figure-html/unnamed-chunk-5-1.png" width="672" /></p>
+<p><strong>Among the award winning movies, Aamir Khan, Kiran Rao, &amp; Siddharth Roy Kapoor directed the movies with the most box office earnings together.</strong></p>
+</div>
+<div id="graph-5" class="section level1">
+<h1>Graph 5</h1>
+<pre class="r"><code>ggplot(data = Filtered_CWLData, mapping = aes(x = Year, y = Box.Office.Earnings.in.Rupees)) +
+  geom_area(fill = &quot;purple&quot;) +
+  labs(x = &quot;Year&quot;, y = &quot;Box Office Earnings in Rupees&quot;)+
+  scale_y_continuous(labels = comma)+
+  scale_x_continuous(breaks = scales::pretty_breaks(n = 10))</code></pre>
+<p><img src="/projects/Bollywood-Filmfare_files/figure-html/unnamed-chunk-6-1.png" width="672" /></p>
+<p><strong>It appears that box office earnings increased over time, most likely due to inflation. 1990, 2010, and 2017 were years that had especially high box office earnings.</strong></p>
+</div>

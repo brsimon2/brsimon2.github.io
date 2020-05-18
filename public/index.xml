@@ -6,10 +6,20 @@
     <description>Recent content on Bradley Simon</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 18 Apr 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 27 Apr 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Bollywood Filmfare Awards</title>
+      <link>/projects/bollywood-filmfare/</link>
+      <pubDate>Mon, 27 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/projects/bollywood-filmfare/</guid>
+      <description>CWLData &amp;lt;- read.csv(&amp;quot;https://raw.githubusercontent.com/brsimon2/Bollywood_Filmfare/master/Filmfare-Awards.csv&amp;quot;) Graph 1 library(tidyverse) library(scales) Box_Office_IMDBRating &amp;lt;- CWLData %&amp;gt;% group_by(IMDB.rating) %&amp;gt;% summarise(Total_Box_Office = sum(as.numeric(Box.Office.Earnings.in.Rupees), na.rm = TRUE)) ggplot(data = Box_Office_IMDBRating, mapping = aes(x = IMDB.rating, y = Total_Box_Office)) + geom_smooth(color = &amp;quot;dodgerblue&amp;quot;) + labs(x = &amp;quot;IMDB Rating&amp;quot;, y = &amp;quot;Box Office Earnings in Rupees&amp;quot;)+ scale_y_continuous(labels = comma) This graph shows that a higher IMDB rating does not necesssarily relate to more box office earnings.
+ Graph 2 Box_Office_Month &amp;lt;- CWLData %&amp;gt;% select(Release.</description>
+    </item>
     
     <item>
       <title>NBA_Social_Influence.Rmd</title>

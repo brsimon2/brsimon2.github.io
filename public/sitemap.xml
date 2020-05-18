@@ -3,17 +3,22 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>/</loc>
-    <lastmod>2020-04-18T00:00:00+00:00</lastmod>
+    <loc>/projects/bollywood-filmfare/</loc>
+    <lastmod>2020-04-27T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/projects/nba-social-influence/</loc>
-    <lastmod>2020-04-18T00:00:00+00:00</lastmod>
+    <loc>/</loc>
+    <lastmod>2020-04-27T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>/projects/</loc>
+    <lastmod>2020-04-27T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/projects/nba-social-influence/</loc>
     <lastmod>2020-04-18T00:00:00+00:00</lastmod>
   </url>
   
