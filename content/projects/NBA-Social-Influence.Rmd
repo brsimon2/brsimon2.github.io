@@ -1,5 +1,5 @@
 ---
-title: "NBA_Social_Influence.Rmd"
+title: "NBA Social Influence"
 author: "Bradley Simon"
 date: "2020-04-18"
 output: html_document
